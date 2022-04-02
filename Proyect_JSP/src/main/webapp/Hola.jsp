@@ -9,6 +9,7 @@
 <body>
 
      La fecha y hora actuales son: <%= new java.util.Date() %>
+     hola
 
 </body>
 </html>
