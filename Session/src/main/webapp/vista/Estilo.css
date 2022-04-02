@@ -1,0 +1,136 @@
+@charset "UTF-8";
+header {
+	font-family: Helvetica;
+	width: 480px;
+	margin: 0 auto;
+}
+
+h1 {
+	text-align: center;
+	color: #62BFD0;
+}
+
+body {
+	background-image: url('../img/4.png');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+/*----------------------------------------------------------------------*/
+/* 
+  Vamos ha implementar css para superponer una imagen sobre la del fondo
+  
+  */
+  
+.parent {
+  position: relative;
+  top: 0;
+  left: 100;
+}
+.image1 {
+  position: relative;
+  top: 0;
+  left: 100;
+  width:800px;
+  height: 400px;
+  border: 1px blue solid;
+  margin-left: 200px;
+}
+
+.image2 {
+  position: relative;
+  top: 200px;
+  left: 100;
+  width:800px;
+  height: 400px;
+  /*border: 1px blue solid;*/
+  margin-right:115px;
+}
+
+
+/* ------------------------------*/
+/* CSS Tabla*/
+
+table {
+	opacity: .9;
+	background: #9BDFF3;;
+	padding: 10px;
+	border: solid 2px #2B4C7D;
+	margin-right: 200px;
+	float: right;
+	
+	
+}
+
+td {
+	padding: 5px 0;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+/*-----------------------------------------------
+/* 
+  Desde aquí está el CSS del menú
+  
+  */
+#header {
+	margin: auto;
+	width: 500px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+.nav>li {
+	float: left;
+}
+
+.nav li a {
+	background-color: #030303;
+	color: #4FDBD0;
+	text-decoration: none;
+	padding: 10px 12px;
+	display: block;
+	font-size: 18px;
+}
+
+.nav li a:hover {
+	background-color: #434343;
+}
+
+.nav li ul {
+	display: none;
+	position: absolute;
+	min-width: 140px;
+	background-color: #434343;
+}
+
+.nav li:hover>ul {
+	display: block;
+}
+
+.nav li ul li {
+	position: relative;
+}
+
+.nav li ul li ul {
+	right: -140px;
+	top: 0px;
+}
+/* --------------------------------------------*/
+/* TEXTO*/
+
+p { 
+  font-weight: bold; 
+  font-style: italic;
+  color: #095DDE;
+}
+
+h2{
+  font-weight: bold; 
+  font-style: italic;
+  color: #095DDE;}
