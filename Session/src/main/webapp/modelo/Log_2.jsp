@@ -23,19 +23,12 @@ String contra = request.getParameter("contra");
 
 Acciones dos = new Acciones();
 dos.Comprobar_Usuario(usuario, contra);
-dos.setUsuario(usuario);
-String datos = (String)dos.getUsuario().toString();
+dos.Resultado();
 
-java.util.ArrayList<String> Datos= new java.util.ArrayList<String>();
 if(dos.controlar() == 1){
 	
-	response.sendRedirect("http://localhost:8007/Session/vista/Menu.html");
-    Datos.add(datos);
-    
-    for( String elem : Datos){
-    	System.out.println(elem);
-    }
-	
+	response.sendRedirect("http://localhost:8007/Session/modelo/Menu.jsp");
+
 }else{
 	response.sendRedirect("http://localhost:8007/Session/vista/Log_2.html");
 	

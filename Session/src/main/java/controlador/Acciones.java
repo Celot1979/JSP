@@ -1,6 +1,13 @@
 package controlador;
 
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.net.UnknownHostException;
 import java.sql.*;
+import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
@@ -43,6 +50,7 @@ public class Acciones {
 	
 	public void Comprobar_Usuario(String usuario,String contra) {
 		try {
+			clave.add(usuario);
 			Class.forName(this.driver);
 			Connection miConexion = DriverManager.getConnection(this.url,this.uss,this.contra);
 			PreparedStatement miPr = miConexion.prepareStatement("SELECT * FROM atf2 WHERE usuario = ? AND contrasena =?", ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
@@ -72,20 +80,27 @@ public class Acciones {
 	
 	
 
-	public String getUsuario() {
-		return usuario;
+	public void Resultado() {
+		for( String elm : clave) {
+			valor = elm;
+		}
+		
+		
 	}
-	public void setUsuario(String usuario) {
-		this.usuario = usuario;
-	}
+	
+	
+	
+	
 
-
+    
 
 	String driver;
 	String url;
 	String uss;
 	String  contra;
-	String nombre,apellido,email,usuario,contrasena;
+	String nombre,apellido,email,usuario,contrasena,valor;
+	String mensajeTexto;
 	int control;
-}
+	ArrayList <String> clave = new ArrayList<String>();
+  }
 
